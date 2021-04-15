@@ -68,8 +68,11 @@ class RewardSystem:
          Entry(window, textvariable = self.rewardVar, justify = LEFT).grid(row = 4, column = 3)
 
          Label(window, text = "        Thank you and make sure to visit on you birthday for your free treat!").grid(row = 5, column = 3, sticky = W)
-         confirmationPage.mainloop()
-       
+        #Create a Sign Up button to proceed to next page
+         Button(window, text = "Back to Sign Up Page", width=21, bg='white', fg='black', command = self.__init__).place(x=120, y=110)
+         
+        
+         window.mainloop() # Create an event loop
         
 
 RewardSystem()  # Create GUI 
