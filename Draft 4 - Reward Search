@@ -1,0 +1,26 @@
+from tkinter import * # Import tkinter; do not need to install it
+from random import random
+
+class RewardSystem:
+    def __init__(self):
+         window = Toplevel()
+         window.title("Rewards Search") # Set title of the window
+         window.configure(background='white')
+         
+         
+         #put the image in a label to display it in the window
+
+
+         # First, create labels in the window for each input and output value. Note they are put into a grid with rows and columns
+         Label(window, text = "                             Rewards Search").grid(row = 2, column = 1, sticky = W)
+         Label(window, text = "\n").grid(row = 2, column = 1, sticky = W)
+         Label(window, text = "Phone Number (*)").grid(row = 9, column = 1, sticky = W)
+         Label(window, text = "Email (*)").grid(row = 11, column = 1, sticky = W)
+
+         #Create data input boxes
+         Entry(window, textvariable = self.phoneNumberVar, justify = LEFT).grid(row = 10, column = 1)
+         self.emailVar = StringVar()
+         Entry(window, textvariable = self.emailVar, justify = LEFT).grid(row = 12, column = 1)
+
+         #Create a Search button to proceed to next page
+         Button(window, text = "SEARCH", width=12, bg='White', fg='Black', command = self.confirmationPage).place(x=155, y=650)
