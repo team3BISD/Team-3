@@ -62,12 +62,12 @@ class RewardSystem:
          
          #put the image in a label to display it in the window
 
-         Label(window, text = "    Congratulations, You're earning points!").grid(row = 2, column = 3, sticky = W)
-         Label(window, text = "              Your Rewards Number").grid(row = 3, column = 3, sticky = W)
+         Label(window, text = "                          Congratulations, You're earning points!").grid(row = 2, column = 3, sticky = W)
+         Label(window, text = "                                        Your Rewards Number").grid(row = 3, column = 3, sticky = W)
          self.rewardVar = StringVar()
          Entry(window, textvariable = self.rewardVar, justify = LEFT).grid(row = 4, column = 3)
 
-         Label(window, text = " ").grid(row = 5, column = 1, sticky = W)
+         Label(window, text = "        Thank you and make sure to visit on you birthday for your free treat!").grid(row = 5, column = 3, sticky = W)
          confirmationPage.mainloop()
        
         
