@@ -47,7 +47,7 @@ class RewardSystem:
          Entry(window, textvariable = self.birthdayVar, justify = LEFT).grid(row = 22, column = 1)
 
          #Create a Sign Up button to proceed to next page
-         Button(window, text = "SIGN UP", width=12, bg='white', fg='black', command = self.confirmationPage).place(x=155, y=650)
+         Button(window, text = "SIGN UP", width=12, bg='White', fg='Black', command = self.confirmationPage).place(x=155, y=650)
 
 
          window.mainloop() # Create an event loop
