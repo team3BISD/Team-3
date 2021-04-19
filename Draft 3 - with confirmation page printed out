@@ -1,5 +1,5 @@
 from tkinter import * # Import tkinter; do not need to install it
-from random import random
+import random
 
 class RewardSystem:
     def __init__(self):
@@ -59,15 +59,15 @@ class RewardSystem:
     def confirmationPage(self):
          window = Tk() # Create a window instance
          window.title("Congratulations, You're earning points!") # Set title of the window
-
-         randNum = random()
+        
+         randNum = round(random.uniform(1000,999999999999))
          self.rewardID = randNum #assigns a random number to reward number
          
          #put the image in a label to display it in the window
 
          Label(window, text = "                          Congratulations, You're earning points!").grid(row = 2, column = 3, sticky = W)
          Label(window, text = "                                        Your Rewards Number").grid(row = 3, column = 3, sticky = W)
-
+         Label(window, text = self.rewardID).grid(row = 4, column = 3, sticky = W)
 
          Label(window, text = "        Thank you and make sure to visit on you birthday for your free treat!").grid(row = 5, column = 3, sticky = W)
         #Create a Sign Up button to proceed to next page
