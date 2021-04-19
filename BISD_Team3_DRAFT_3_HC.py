@@ -54,27 +54,27 @@ class RewardSystem:
           window.mainloop() # Create an event loop
 
     
-     def confirmationPage(self):
-          window = Tk() # Create a window instance
-          window.title("Congratulations, You're earning points!") # Set title of the window
+    def confirmationPage(self):
+         window = Tk() # Create a window instance
+         window.title("Congratulations, You're earning points!") # Set title of the window
          
-          randNum = random()
-          self.rewardID = randNum #assigns a random number to reward number
+         randNum = random()
+         self.rewardID = randNum #assigns a random number to reward number
          
-          photo = PhotoImage(file=r'C:\Users\htcam\iCloudDrive\Documents\TCU\BIS Systems Development\APPLICATION\Ampersand.png')
-          Label(window, image=photo).grid(row = 1, column = 1, columnspan=2, sticky = W) #put the image in a label to display it in the window#put the image in a label to display it in the window
+         photo = PhotoImage(file=r'C:\Users\htcam\iCloudDrive\Documents\TCU\BIS Systems Development\APPLICATION\Ampersand.png')
+         Label(window, image=photo).grid(row = 1, column = 1, columnspan=2, sticky = W) #put the image in a label to display it in the window#put the image in a label to display it in the window
 
-          Label(window, text = "                          Congratulations, You're earning points!").grid(row = 2, column = 3, sticky = W)
-          Label(window, text = "                                        Your Rewards Number").grid(row = 3, column = 3, sticky = W)
-          self.rewardVar = StringVar()
-          Entry(window, textvariable = self.rewardVar, justify = LEFT).grid(row = 4, column = 3)
+         Label(window, text = "                          Congratulations, You're earning points!").grid(row = 2, column = 3, sticky = W)
+         Label(window, text = "                                        Your Rewards Number").grid(row = 3, column = 3, sticky = W)
+         self.rewardVar = StringVar()
+         Entry(window, textvariable = self.rewardVar, justify = LEFT).grid(row = 4, column = 3)
 
-          Label(window, text = "        Thank you and make sure to visit on you birthday for your free treat!").grid(row = 5, column = 3, sticky = W)
-        #Create a Sign Up button to proceed to next page
-          Button(window, text = "Back to Sign Up Page", width=21, bg='white', fg='black', command = self.__init__).place(x=120, y=110)
+         Label(window, text = "        Thank you and make sure to visit on you birthday for your free treat!").grid(row = 5, column = 3, sticky = W)
+         #Create a Sign Up button to proceed to next page
+         Button(window, text = "Back to Sign Up Page", width=21, bg='white', fg='black', command = self.__init__).place(x=120, y=110)
          
         
-          window.mainloop() # Create an event loop
+         window.mainloop() # Create an event loop
         
 
 RewardSystem()  # Create GUI 
