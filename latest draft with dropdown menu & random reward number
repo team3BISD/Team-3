@@ -114,6 +114,17 @@ class RewardSystem:
          Label(window, text = "Street Address (*)").grid(row = 13, column = 1, sticky = W)
          Label(window, text = "City (*)").grid(row = 15, column = 1, sticky = W)
          Label(window, text = "State (*)").grid(row = 17, column = 1, sticky = W)
+         
+         #drop down boxes
+         tkvar = StringVar(window)
+
+         choices = {'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'}
+         tkvar.set('Select')
+
+         popupMenu = OptionMenu(window,tkvar, *choices)
+         popupMenu.grid(row=18, column = 1, sticky = W)
+
+
          Label(window, text = "Zip Code (*)").grid(row = 19, column = 1, sticky = W)
          Label(window, text = "Birthday (optional)").grid(row = 21, column = 1, sticky = W)
          Label(window, text = "\n\n\n\nBy clicking Sign Up, you agree to Ampersand's Terms of Use and acknowledge\n you have read the Privacy Policy. You also consent to receive calls or SMS \nmessages, including by automated dialer, from Ampersand and its affiliates to the \nnumber you provide for informational and/or marketing purposes. Consent to \nreceive marketing messages is not a condition to use Ampersand’s services. You \nunderstand that you may opt out by texting “STOP” to 89203.").grid(row = 25, column = 1, sticky = W)
@@ -131,8 +142,6 @@ class RewardSystem:
          Entry(window, textvariable = self.streetAddressVar, justify = LEFT).grid(row = 14, column = 1)
          self.cityVar = StringVar()
          Entry(window, textvariable = self.cityVar, justify = LEFT).grid(row = 16, column = 1)
-         self.stateVar = StringVar()
-         Entry(window, textvariable = self.stateVar, justify = LEFT).grid(row = 18, column = 1)
          self.zipCodeVar = StringVar()
          Entry(window, textvariable = self.zipCodeVar, justify = LEFT).grid(row = 20, column = 1)
          self.birthdayVar = StringVar()
